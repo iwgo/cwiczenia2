@@ -1,0 +1,59 @@
+body{
+    background: lightcyan;
+}
+main {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+header {
+    /* height: 150px; */
+    padding: 10px;
+    background: lightblue;
+    display: flex;
+    justify-content: space-between;
+    /* wyrównianie w pionie align-items*/
+    align-items: center;  
+}
+/* 
+Każdy ul wewnątrz każdego nav
+nav ul{}
+*/
+nav {
+    width: 70%;
+}
+nav > ul {
+    /* zmiana punktorów listy */
+list-style: none;
+margin: 0;
+padding-left: 0;
+display: flex;
+/* justify-content: space-between */
+/* justify-content: space-around; */
+justify-content: space-evenly;
+}
+section{
+    display: flex;
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+}
+aside {
+    width: 200px;
+    height: 700px;
+    background: lightskyblue;
+    
+}
+article {
+    width: 800px;
+    height: 700px;
+    background: lightseagreen;
+}
+#right { 
+    width: 200px;
+    height: 700px;
+    background: lightyellow; 
+}
+footer {
+    height: 150px;
+    background: lightslategray;
+}
