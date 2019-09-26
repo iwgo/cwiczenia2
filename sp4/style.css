@@ -1,0 +1,112 @@
+/* main{
+    width: 100%;
+    background: red;
+    padding: 15px;
+}
+@media (max-width: 550px) {
+    main {
+        background: green;
+    }
+}
+@media(min-width: 551px) and (max-width: 760px){
+    main{
+        background: blue;
+        padding-right: 20px;
+    }
+}
+@media(min-width: 761px) and(max-width:1024px){
+    main{
+        background:  blue;
+        padding-right: 20px;
+    }
+} */
+
+body {
+    background: lightsteelblue
+}
+main{
+    width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 60px 140px 500px 200px 200px 80px;
+    grid-template-columns: 2fr 1fr 1fr 2fr;  
+    grid-template-areas: 
+        "ganav ganav ganav ganav"  
+        "gaheader gaheader gaheader gaheader"
+        "gaoferta1 gaoferta2 gaoferta2 gaoferta3"
+        "gazdjecie gazdjecie gazdjecie gazdjecie"
+        "gauslugi1 gauslugi1 gauslugi2 gauslugi2"
+        "gastopka gastopka gastopka gastopka"       
+}
+nav {
+    background: lightblue;
+    grid-area: ganav;
+}
+header{
+    background: yellow;
+    grid-area: gaheader;
+}
+#oferta1{
+    background: salmon;
+    grid-area: gaoferta1;
+}
+#oferta2{
+    background: pink;
+    grid-area: gaoferta2;
+}
+#oferta3 {
+    background: blue;
+    grid-area: gaoferta3;
+}
+#zdjecie {
+    background: lightblue;
+    grid-area: gazdjecie;
+}
+#uslugi1 {
+    background: aquamarine;
+    grid-area: gauslugi1;
+}
+#uslugi2{
+    background: lightcyan;
+    grid-area: gauslugi2;
+}
+footer{
+    background: moccasin;
+    grid-area: gastopka;
+}
+
+@media (max-width: 800px) {
+    main {
+        width: 100%; 
+        grid-template-rows: 60px 140px 300px 300px 200px 120px 120px 80px;
+        grid-template-columns: 1fr 1fr;  
+        grid-template-areas: 
+            "ganav ganav"  
+            "gaheader gaheader"
+            "gaoferta1 gaoferta2"
+            "gaoferta3 gaoferta3"
+            "gazdjecie gazdjecie"
+            "gauslugi1 gauslugi1"
+            "gauslugi2 gauslugi2"
+            "gastopka gastopka"   
+    }
+}
+
+@media (max-width: 550px) {
+    main{
+        width: 100%;
+        grid-template-rows: 60px 140px 300px 300px 300px 200px 120px 120px 80px;
+        grid-template-columns: 1fr;  
+        grid-template-areas: 
+            "ganav"  
+            "gaheader"
+            "gaoferta1"
+            "gaoferta2"
+            "gaoferta3"
+            "gazdjecie"
+            "gauslugi1"
+            "gauslugi2"
+            "gastopka" 
+    }
+}
+
