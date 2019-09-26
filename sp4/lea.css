@@ -1,0 +1,46 @@
+ 
+    main {
+        width: 500px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-rows: 100px 80px 600px 300px 200px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "ganav"
+        "gaheader"
+        "gaoferta"
+        "gakontakt"
+        "gastopka"
+    }
+    nav {
+        background: orange;
+        grid-area: ganav;
+    }
+    header {
+        background: yellow;
+        grid-area: gaheader;
+    }
+    #oferta {
+        background: pink;
+        grid-area: gaoferta;
+    }
+    #kontakt {
+        background: coral;
+        grid-area: gakontakt
+    }
+    footer {
+        background: salmon;
+        grid-area: gastopka;
+    }
+    @media (min-width: 800px) {
+        main{
+            width: 100%;
+            grid-template-rows: 100px 400px 500px 200px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+            "gaheader goheader"
+            "gaoferta ganav"
+            "gakontakt gakontakt"
+            "gastopka gastopka"
+        }
+    }
