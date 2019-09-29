@@ -32,7 +32,7 @@
         background: salmon;
         grid-area: gastopka;
     }
-    @media (min-width: 800px) {
+    @media (min-width: 501px) {
         main{
             width: 100%;
             grid-template-rows: 100px 400px 500px 200px;
@@ -44,3 +44,5 @@
             "gastopka gastopka"
         }
     }
+
+    @media ()
