@@ -32,7 +32,7 @@
         background: salmon;
         grid-area: gastopka;
     }
-    @media (min-width: 501px) {
+    @media (min-width: 501px) and (max-width: 760px) {
         main{
             width: 100%;
             grid-template-rows: 100px 400px 500px 200px;
@@ -45,4 +45,14 @@
         }
     }
 
-    @media ()
+    @media (min-width: 761px) and (max-width:1200px) {
+        main{
+            width: 100%;
+            grid-template-rows: 100px 800px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: 
+            "gaheader gaheader gaheader"
+            "gaoferta ganav ganav"
+            "gaoferta gakontakt gastopka"
+        }
+    }
