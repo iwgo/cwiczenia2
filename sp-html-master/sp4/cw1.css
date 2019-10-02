@@ -1,0 +1,67 @@
+main {
+    width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 60px 140px 500px 200px 200px 80px;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    grid-template-areas:
+        "ganav ganav ganav ganav"
+        "gaheader gaheader gaheader gaheader"
+        "gaoferta1 gaoferta2 gaoferta2 gaoferta3"
+        "gazdjecie gazdjecie gazdjecie gazdjecie"
+        "gauslugi1 gauslugi1 gauslugi2 gauslugi2"
+        "gastopka gastopka gastopka gastopka"
+}
+
+nav {
+    background: lightblue;
+    grid-area: ganav;
+}
+header {
+    background: lightcoral;
+    grid-area: gaheader;
+}
+#oferta1 {
+    background: lightgrey;
+    grid-area: gaoferta1;
+}
+#oferta2 {
+    background: lightpink;
+    grid-area: gaoferta2;
+}
+#oferta3 {
+    background: lightskyblue;
+    grid-area: gaoferta3;
+}
+#zdjecie {
+    background: lightseagreen;
+    grid-area: gazdjecie;
+}
+#uslugi1 {
+    background: lightyellow;
+    grid-area: gauslugi1;
+}
+#uslugi2 {
+    background: lightsteelblue;
+    grid-area: gauslugi2;
+}
+footer {
+    background: moccasin;
+    grid-area: gastopka;
+}
+@media (max-width: 800px) {
+    main {
+        width: 100%;
+        grid-template-rows: 60px 140px 300px 300px 200px 120px 120px 80px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "ganav ganav"
+            "gaheader gaheader"
+            "gaoferta1 gaoferta2"
+            "gaoferta3 gaoferta3"
+            "gazdjecie gazdjecie"
+            "gauslugi1 gauslugi1"
+            "gauslugi2 gauslugi2"
+            "gastopka gastopka"
+    }
+}
