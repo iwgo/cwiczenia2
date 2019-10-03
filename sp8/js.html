@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS zabawy</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script type="text/javascript" src=""></script>  -->
+</head>
+<body>
+    <p>
+            <!-- najstarszy sposób na obsługę zdarzeń: oninput="zmienKolor()" -->
+        <button id="pokazUkryj">Pokaż/ukryj box-a</button>
+        <button id="odlicz">Odlicz do 10</button>
+            Podaj kolor: <input type="text" name="" id="kolor">
+    </p>
+    <div id="pudelko" class="lemonka">
+    </div>
+
+    <script type="text/javascript">
+        // pobieramy obiekt #pudelko
+        // let box = document.getElementById('pudelko')
+        let box = document.querySelector('#pudelko')
+        let kolorBox = document.querySelector('#kolor')
+        //getelementById - ku pamięci
+        let pokazUkryjBtn = document.getElementById('pokazUkryj')
+        let odlicz = document.getElementById('odlicz')
+
+        odliczBtn.addEventListener('click', odliczanie)
+        pokazUkryjBtn.addEventListener('click', pokazUkryjBox)
+        kolorBox.addEventListener('input', zmienKolor)
+
+        // kolor.Box.oninput = zmienKolor
+        //zmina zawartosci elementu
+        //box.inerText = '<b>Jeeeeeeeeee to działa!</b>'
+        box.innerHTML = '<b>Jeeeeeeeeee to działa!</b>'
+
+        //zmiana formatowania
+        // box.style.backgroundColor = "red"
+        // box.className += " czerwony"
+        box.classList.add('czerwony')
+        box.classList.remove('lemonka')
+        // box.classList.replace('')
+
+        function zmienKolor() {
+            console.log(kolorBox.value)
+            box.style.backgroundColor = kolorBox.value
+        }
+        function pokazUkryjBox(e) {
+            console.log(e)
+            box.classList.toggle('hidden')
+        }
+        // // function odliczanie() {
+        // //     for(let licznik = 1; licznik < 11; licznik++) {
+        // //         box.innerHTML += '<br>' + licznik
+        // //     }
+        // }
+        let licznik = 1
+        let licznikInterval
+        function odliczanie() {
+            if (licznik<11) {
+                wypiszLicznik()
+                setTimeout(odliczanie, 300)
+            }
+        }
+        // function odliczanie() {
+        //     for (let l =1; l<11; l++) {
+        //         setTimeout(wypiszLicznik, 1000)
+        //     }
+        }
+        // function odliczanie() {
+        //     if (licznikInterval) {
+        //         clearInterval(licznikInterval)
+        //         licznikInterval = undefinied
+        //     } else {
+        //     licznikInterval = setInterval(wypiszLicznik, 1000)
+        //     }
+        // }
+        function wypiszLicznik() {
+            box.innerHTML += '<br>' + licznik
+            licznik++
+        }
+
+
+    </script>
+</body>
+</html>
